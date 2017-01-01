@@ -15,6 +15,11 @@ class User < ActiveRecord::Base
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
+  validates_confirmation_of :password
+  validates_format_of :email, with: /\A[\w]+@[\w]+\.[\w]+\z/
+
+  validates_format_of :username, with: /\A[\w]+\z_/
+  validates_length_of :username, maximum: 40
 
   # виртуальное поле, которое не сохраняется в базу
   # из него перед сохранение читается пароль, и сохраняется в базу уже
