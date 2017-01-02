@@ -31,8 +31,8 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   
-  def downcase_username
-    self.username = self.username.downcase
+  def username_downcase
+    self.username.downcase!
   end
 
   # шифруем пароль, если он задан
