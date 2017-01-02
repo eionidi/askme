@@ -14,6 +14,8 @@ gem 'uglifier'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'i18n'
+
 group :production do
   gem 'pg'
 end

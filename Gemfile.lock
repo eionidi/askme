@@ -118,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  i18n
   jquery-rails
   pg
   rails (= 4.2.6)
