@@ -20,6 +20,12 @@
           <%= question.answer %>
         </div>
     <% end %>
+    
+    <div class="question-author">
+      <% if question.author.present? %>
+        <%= link_to "@#{question.author.username}", user_path(question.author) %>
+      <% end %>
+    </div>
 
     <div class="question-date">
       <!-- Локализованный вывод даты вопроса в коротком формате -->
