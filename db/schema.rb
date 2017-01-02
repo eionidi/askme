@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160503121715) do
     t.string   "password_hash"
     t.string   "password_salt"
     t.string   "avatar_url"
+    t.string   "background_color", default: "#73d6d0"
   end
 
 end
