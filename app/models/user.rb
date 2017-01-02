@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
 
   before_save :encrypt_password
+  
+  def username_downcase
+    self.username.downcase!
+  end
 
   # шифруем пароль, если он задан
   def encrypt_password
