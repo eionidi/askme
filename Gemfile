@@ -15,6 +15,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'i18n'
+gem 'rails_12factor'
 
 group :production do
   gem 'pg'
