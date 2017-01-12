@@ -20,3 +20,8 @@ module ApplicationHelper
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
 end
+
+  def count_questions
+    I18n.t('question', count: @questions.count)
+  end
+end
