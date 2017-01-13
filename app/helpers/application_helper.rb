@@ -21,6 +21,6 @@ module ApplicationHelper
   end
 
   def count_questions
-    I18n.t('вопрос', count: @questions.count)
+    I18n.t("question.many", count: @questions.count)
   end
 end
