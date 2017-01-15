@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   # эта команда добавляет связь с моделью Question на уровне объектов
   # она же добавляет метод .questions к данному объекту
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
