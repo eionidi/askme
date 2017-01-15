@@ -26,10 +26,6 @@
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
   
-  <div>
-   <%= sclonenie(@user.questions.size, ['вопрос','вопроса','вопросов'])  %>
-  </div>
-
   <div class="user-statistics container text-center">
     <div class="column-1-3">
       <h1 class="title-small"><%= @questions_count %></h1>
