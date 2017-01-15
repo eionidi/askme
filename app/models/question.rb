@@ -5,7 +5,7 @@
 class Question < ActiveRecord::Base
   # эта команда добавляет связь с моделью User на уровне объектов
   # она же добавляет метод .user к данному объекту
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   belongs_to :author, class_name: 'User'
 
   # эта валидация препятствует созданию Вопросов, у которых нет пользователя
