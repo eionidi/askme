@@ -5,6 +5,6 @@
 class AddUserToQuestion < ActiveRecord::Migration
   def change
     # добавляет в таблицу questions поле user_id, ссылающееся на таблицу users
-    add_reference :questions, :user, index: true, foreign_key: true
+    add_reference :questions, :user, index: true, foreign_key: true, dependent: :destroy
   end
 end
