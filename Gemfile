@@ -16,7 +16,7 @@ gem 'jquery-rails'
 
 gem 'i18n'
 gem 'rails_12factor'
-gem 'russian'
+gem 'rails-i18n'
 
 group :production do
   gem 'pg'
