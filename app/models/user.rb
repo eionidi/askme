@@ -20,8 +20,8 @@ class User < ActiveRecord::Base
 
   validates_format_of :username, with: /\A[a-zA-Z0-9_]+\z/
   validates_length_of :username, maximum: 40
-  #validates_format_of :background_color, with: /\A#?(?:[a-fA-F0-9]{3}){1,2}\z/i
-  validates_format_of :background_color, with: /\A#(?:[a-f0-9])\z/i
+  validates_format_of :background_color, with: /\A#?(?:[a-fA-F0-9]{3}){1,2}\z/i
+  #validates_format_of :background_color, with: /\A#(?:[a-f0-9])\z/i
 
   # виртуальное поле, которое не сохраняется в базу
   # из него перед сохранение читается пароль, и сохраняется в базу уже
