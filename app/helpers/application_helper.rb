@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def count_questions
-    I18n.t("question.many", count: @questions.count)
+    I18n.t("question", count: @questions.count)
   end
   
   # def sklonenie(number, krokodil, krokodila, krokodilov)
