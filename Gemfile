@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'i18n'
+gem 'recaptcha', require:'recaptcha/rails'
 #gem 'rails_12factor'
 gem 'rails-i18n'
 gem 'russian'

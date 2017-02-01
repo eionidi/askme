@@ -101,6 +101,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.1.2)
+    recaptcha (4.0.1)
+      json
     russian (0.6.0)
       i18n (>= 0.5.0)
     sprockets (3.5.2)
@@ -134,6 +136,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails-i18n
   rails_12factor
+  recaptcha
   russian
   sqlite3
   uglifier
