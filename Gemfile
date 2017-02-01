@@ -10,7 +10,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 
-gem 'sqlite3'
 gem 'uglifier'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
