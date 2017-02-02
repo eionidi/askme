@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
   validates_confirmation_of :password
-  validates_format_of :email, with: /\A[\w]+@[\w]+\.[\w]+\z/
+  validates_format_of :email, with: /\A[\w].+@[\w]+\.[\w]+\z/
 
   validates_format_of :username, with: /\A[a-zA-Z0-9_]+\z/
   validates_length_of :username, maximum: 40
