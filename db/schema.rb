@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170102202500) do
+ActiveRecord::Schema.define(version: 20170211110247) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170102202500) do
     t.string   "password_salt"
     t.string   "avatar_url"
     t.string   "background_color", default: "#73d6d0"
+    t.string   "avatar"
   end
 
 end
