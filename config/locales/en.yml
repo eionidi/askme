@@ -4,3 +4,8 @@ en:
   question:
     one: question
     other: questions
+
+  answer:
+    one: answer
+    other: answers
+    
