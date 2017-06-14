@@ -25,15 +25,15 @@
     <%#Используем встроенный в rails хелпер link_to%>
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
-  
+
   <div class="user-statistics container text-center">
     <div class="column-1-3">
       <h1 class="title-small"><%= "#{@questions.count}" %></h1>
       <p><%= "#{count_questions}"%></p>
     </div>
     <div class="column-1-3">
-      <h1 class="title-small"><%= @answers_count %></h1>
-      <p>ответов</p>
+      <h1 class="title-small"><%= "#{@answers.count}" %></h1>
+      <p><%= "#{count_answers}"%></p>
     </div>
     <div class="column-1-3">
       <h1 class="title-small"><%= @unanswered_count %></h1>
@@ -59,7 +59,7 @@
           <%= f.label "Ваш вопрос для @#{@user.username}", class: 'form-label' %>
           <%= f.text_area :text, class: 'form-textarea' %>
         </div>
-        
+
         <%= recaptcha_tags size: 'compact' unless current_user.present? %>
 
         <div class="form-action">

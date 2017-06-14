@@ -1,6 +1,6 @@
 en:
   hello: "Hello world"
-  
+
   question:
     one: question
     other: questions
@@ -8,4 +8,4 @@ en:
   answer:
     one: answer
     other: answers
-    
+
