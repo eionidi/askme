@@ -28,12 +28,12 @@
 
   <div class="user-statistics container text-center">
     <div class="column-1-3">
-      <h1 class="title-small"><%= "#{@questions.count}" %></h1>
+      <h1 class="title-small"><%= @questions.count %></h1>
       <p><%= "#{count_questions}"%></p>
     </div>
     <div class="column-1-3">
       <h1 class="title-small"><%= @answers.count %></h1>
-      <p>ответов</p>
+      <p><%= "#{count_answers}"%></p>
     </div>
     <div class="column-1-3">
       <h1 class="title-small"><%= @unanswered_count %></h1>
