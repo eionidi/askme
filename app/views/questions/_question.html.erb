@@ -11,7 +11,7 @@
 <div class="question">
   <div class="question-content">
     <div class="question-text text-lead">
-      <%= question.text %>
+      <%= get_text_with_hashtags(question.text).html_safe %>
     </div>
 
     <!-- Если вопрос имеет ответ, показать его -->
@@ -20,7 +20,7 @@
           <%= question.answer %>
         </div>
     <% end %>
-    
+
     <div class="question-author">
       <% if question.author.present? %>
         <%= link_to "@#{question.author.username}", user_path(question.author) %>

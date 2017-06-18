@@ -1,0 +1,8 @@
+.tag {
+    color: blue;
+    text-decoration: underline;
+}
+
+.tag:hover {
+    color: red;
+}

@@ -80,11 +80,11 @@
     <div class="questions-list">
       <%#Обратите внимание, как мы делаем цикл по всем вопросам,%>
       <%#точно также, как мы делали циклы в ruby%>
-      <% @questions.each do |question| %>
+      <%= render partial: 'questions/question', collection: @questions,
+                 as: :question, locals: {it_hashtags: false} %>
         <%#Мы рисуем здесь для кажого вопроса в списке вопросов%>
         <%#фрагмент (паршал), передавая в него текущий вопрос%>
         <%#Это очень похоже на вызов метода в ruby%>
-        <%= render partial: 'questions/question', object: question %>
       <% end %>
     </div>
   </div>

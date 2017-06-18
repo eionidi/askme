@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   # ресурс вопросов (кроме экшенов :show, :new, :index)
   resources :questions, except: [:show, :new, :index]
+  resources :tags, only: [:show]
 end
