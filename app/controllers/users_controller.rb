@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     @answers_count = @questions.where.not(answer: nil).count
     @unanswered_count = @questions_count - @answers_count
   end
-  
+
   def destroy
     @user.destroy
     redirect_to root_url, notice: 'Пользователь удален'
