@@ -27,6 +27,15 @@ class Question < ActiveRecord::Base
       h_tags << Tag.find_or_create_by(title: tag)
     end
 
-    self.tags = h_tags if h_tags.any?
+    # self.tags = h_tags if h_tags.any?
+    # transaction do
+    #   self&.tags.clear
+    #   hashtags = self.text.scan(TAG_REGEX)
+    #   hashtags << self.answer.scan(TAG_REGEX) if self.answer.present? && self.answer.match(TAG_REGEX)
+    #   hashtags.uniq.map do |hashtag|
+    #     tag = Tag.find_or_create_by(name: hashtag.to_s.mb_chars.downcase.delete('#[]"'))
+    #     self.tags << tag unless tag.nil?
+    #   end
+    # end
   end
 end
