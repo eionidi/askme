@@ -31,6 +31,12 @@
       <!-- Локализованный вывод даты вопроса в коротком формате -->
       <%= l(question.created_at, format: :short) %>
     </div>
+
+   <%#show only for hashtags%>
+    <% if it_hashtags %>
+        для <%= link_to question.user.username, user_path(question.user) %>
+    <% end %>
+    <%= l(question.created_at, format: :short) %>
   </div>
 
   <!-- Простая авторизация: только владелец вопроса может его редактировать -->

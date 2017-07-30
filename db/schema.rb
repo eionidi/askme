@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618143856) do
+ActiveRecord::Schema.define(version: 20170730204705) do
 
   create_table "questions", force: :cascade do |t|
+    t.string   "name"
     t.string   "text"
     t.string   "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "author_id"
+    t.integer  "questioning_user_id"
   end
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id"
@@ -29,6 +31,10 @@ ActiveRecord::Schema.define(version: 20170618143856) do
     t.integer "tag_id"
   end
 
+  add_index "questions_tags", ["question_id", "tag_id"], name: "index_questions_tags_on_question_id_and_tag_id", unique: true
+  add_index "questions_tags", ["question_id"], name: "index_questions_tags_on_question_id"
+  add_index "questions_tags", ["tag_id"], name: "index_questions_tags_on_tag_id"
+
   create_table "tags", force: :cascade do |t|
     t.string   "title"
     t.integer  "question_id"
@@ -37,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170618143856) do
   end
 
   add_index "tags", ["question_id"], name: "index_tags_on_question_id"
+  add_index "tags", ["title"], name: "index_tags_on_title", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
