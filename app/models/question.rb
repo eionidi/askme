@@ -15,18 +15,20 @@ class Question < ActiveRecord::Base
 
   before_save :create_h_tags
 
-  def self.get_tags_from_question(question)
-    question.text.scan(/#[\w]+/).map {|tag| tag.downcase.delete('#')}.uniq
-  end
-
   def create_h_tags
-    #Question.get_tags_from_question(self).map {|tag| Tag.find_or_create_by(title: tag)}
     h_tags = []
-    tags = Question.get_tags_from_question(self)
+    tags = get_tags_from_question
     tags.each do |tag|
       h_tags << Tag.find_or_create_by(title: tag)
     end
 
     self.tags = h_tags if h_tags.any?
+  end
+
+  def get_tags_from_question
+    fields = [text, answer]
+    fields.compact.map do |field|
+      field.scan(/#[\w]+/).map {|tag| tag.downcase.delete('#')}
+    end.flatten.uniq
   end
 end
