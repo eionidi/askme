@@ -6,9 +6,10 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'i18n'
+# gem 'globalize'
 gem 'recaptcha', require:'recaptcha/rails'
 gem 'rails-i18n'
-gem 'russian'
+# gem 'russian'
 
 gem 'carrierwave'
 gem 'rmagick'

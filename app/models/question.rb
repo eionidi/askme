@@ -28,7 +28,7 @@ class Question < ActiveRecord::Base
   def get_tags_from_question
     fields = [text, answer]
     fields.compact.map do |field|
-      field.scan(/#[\w]+/).map {|tag| tag.downcase.delete('#')}
+      field.scan(/#[\w\p{Cyrillic}]+/).map {|tag| tag.downcase.delete('#')}
     end.flatten.uniq
   end
 end
